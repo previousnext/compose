@@ -23,4 +23,5 @@ func TestLoad(t *testing.T) {
 	assert.Equal(t, compose.Services["a"].Deploy.Resources.Limits.CPUs, "500m")
 	assert.Equal(t, compose.Services["a"].Deploy.Resources.Limits.Memory, "2048Mi")
 	assert.Equal(t, compose.Services["a"].ExtraHosts, []string{"some.hostname:1.2.3.4"})
+	assert.Equal(t, compose.Services["a"].Labels, map[string]string{ "m8s.io/skip": "true"})
 }

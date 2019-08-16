@@ -22,7 +22,7 @@ type Service struct {
 	CapAdd      []string      `yaml:"cap_add"`
 	Tmpfs       []string      `yaml:"tmpfs"`
 	Deploy      ServiceDeploy `yaml:"deploy"`
-	ExtraHosts	[]string	  `yaml:"extra_hosts"`
+	ExtraHosts  []string      `yaml:"extra_hosts"`
 }
 
 // ServiceDeploy provides deployment information for a service.

@@ -12,7 +12,7 @@ func TestLoad(t *testing.T) {
 	assert.Nil(t, err)
 
 	assert.Equal(t, compose.Services["a"].Image, "hostname.io/org/repo:version")
-	assert.Equal(t, compose.Services["a"].Volumes, []string{"a:/a",  "b:/b"})
+	assert.Equal(t, compose.Services["a"].Volumes, []string{"a:/a", "b:/b"})
 	assert.Equal(t, compose.Services["a"].Entrypoint, []string{"/entrypoint"})
 	assert.Equal(t, compose.Services["a"].Ports, []string{"1000:2000"})
 	assert.Equal(t, compose.Services["a"].Environment, []string{"SOME_VAR=somevalue"})
